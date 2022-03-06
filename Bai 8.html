@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let randomArr = []
+    let flag = false;
+
+    for (let i = 0; i < 10; i++) {
+        let randomNum = Math.round(Math.random() * 30);
+        randomArr.push(randomNum);
+    }
+
+    document.write("Mảng 10 số nguyên: " + "[ " + randomArr + " ]<br>")
+
+    for (let i = 0; i < randomArr.length - 1; i++) {
+        for (let j = i + 1; j < randomArr.length; j++) {
+            if (randomArr[i] < randomArr[j]) {
+                tg = randomArr[i];
+                randomArr[i] = randomArr[j]
+                randomArr[j] = tg;
+            }
+        }
+    }
+
+    document.write("Mảng sau khi sắp xếp: " + "[ " + randomArr + " ]")
+
+</script>
+
+</body>
+</html>

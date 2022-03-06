@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let randomArr = []
+    let flag = false;
+
+    for (let i = 0; i < 10; i++) {
+        let randomNum = Math.round(Math.random() * 30);
+        randomArr.push(randomNum);
+    }
+
+    document.write("Mảng 10 số nguyên bất kỳ từ 1 - 30: " + "[ " + randomArr + " ] <br> <br>")
+    n = parseInt(prompt("Nhập vào số V trong khoảng từ 1 -30:"))
+
+
+    for (let i = 0; i < randomArr.length; i++) {
+        if (randomArr[i] == n) {
+            flag = true;
+        }
+    }
+    if (flag) {
+        document.write("V có trong mảng")
+    } else {
+        document.write("V không có trong mảng")
+    }
+
+
+</script>
+
+</body>
+</html>

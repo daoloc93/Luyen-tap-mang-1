@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let randomArr = [];
+
+    for (let i = 0; i < 10; i++) {
+        let randomNum = Math.floor(Math.random() * 20);
+        randomArr.push(randomNum);
+    }
+
+    let max = randomArr[0];
+    let index = 0;
+
+    for (let i = 1; i < randomArr.length; i++) {
+        if (randomArr[i] > max) {
+            max = randomArr[i];
+            index = i;
+        }
+    }
+
+    document.write("Mảng số nguyên " + "[ " + randomArr + " ]" + " có giá trị lớn nhất là " + max + " tại vị trí thứ " + index)
+
+</script>
+</body>
+</html>

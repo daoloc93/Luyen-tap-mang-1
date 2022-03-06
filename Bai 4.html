@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let randomArr = [];
+    let sum = 0;
+
+    for (let i = 0; i < 10; i++) {
+        let randomNum = Math.floor(Math.random() * 30);
+        randomArr.push(randomNum);
+    }
+
+    document.write("Mảng trước khi đảo: " + "[ " +  randomArr + " ]" + "<br>")
+
+    let first = 0;
+    let last = randomArr.length-1;
+    while (first < last) {
+        let i = randomArr[first];
+        randomArr[first] = randomArr[last];
+        randomArr[last] = i;
+        first ++;
+        last --;
+    }
+
+    document.write("Mảng sau khi đảo: " + "[ " + randomArr + " ]")
+
+</script>
+</body>
+</html>

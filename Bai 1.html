@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    let randomArr = [];
+    let count = 0;
+    let result = "";
+
+    for (let i=0; i<10; i++) {
+        let randomNum = Math.floor(Math.random()*20);
+        randomArr.push(randomNum);
+    }
+
+    for (let i=0; i<randomArr.length; i++) {
+        if (randomArr[i] >= 10) {
+            count ++;
+            result += randomArr[i] + ", ";
+        }
+    }
+
+    document.write("Mảng số nguyên: " + "[ " + randomArr + " ]" +  "<br> Có " + count + " phần tử lớn hơn 10 là: " + result + "/")
+
+</script>
+
+</body>
+</html>

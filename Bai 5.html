@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập vào một dãy các số nguyên, cách nhau bởi dấu phẩy:</h3>
+<input id="numString" type="text">
+<button onclick="dem()">Đếm số nguyên âm</button>
+<h3 id="result"></h3>
+<script>
+
+    function dem() {
+        let numString = document.getElementById("numString").value;
+        let numArray = numString.split(",");
+        let count = 0;
+        for (let n = 0; n < numArray.length; n++) {
+            if (numArray[n] < 0) {
+                count ++;
+            }
+        }
+        document.getElementById("result").innerHTML = "Trong chuỗi có " + count + " số nguyên âm"
+    }
+
+</script>
+
+</body>
+</html>

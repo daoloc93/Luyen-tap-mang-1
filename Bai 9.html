@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function taoMang() {
+        let randomArr = []
+
+        for (let i = 0; i < 10; i++) {
+            let randomNum = Math.round(Math.random() * 30);
+            randomArr.push(randomNum);
+        }
+        return randomArr
+    }
+
+    let a = taoMang();
+    let b = taoMang();
+    let c = a.concat(b);
+g
+    document.write("Mảng a = [ " + a + " ]" + "<br>")
+    document.write("Mảng b = [ " + b + " ]" + "<br>")
+    document.write("Mảng c = [ " + c + " ]" + "<br>")
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let randomArr = [];
+    let sum = 0;
+
+    for (let i = 0; i < 10; i++) {
+        let randomNum = Math.floor(Math.random() * 30);
+        randomArr.push(randomNum);
+    }
+
+    for (let i = 0; i < randomArr.length; i++) {
+        if (randomArr[i] < randomArr[i+1]) {
+            max = randomArr[i+1];
+        }
+        sum += randomArr[i];
+    }
+    let avg = sum/randomArr.length;
+
+    document.write("Mảng số nguyên " + "[ " + randomArr + " ]" + " có giá trị lớn nhất là " + max + " và giá trị trung bình là " + avg)
+
+</script>
+
+</body>
+</html>
